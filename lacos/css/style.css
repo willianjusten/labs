@@ -1,0 +1,34 @@
+html,body {
+	background: url(../img/title_bg.png) 50% 0 no-repeat, url(../img/bg_repeat.png) 50% 0 repeat-y #889ba7;
+	margin: 0;
+	font-family: 'Josefin Sans', arial, serif;
+	color: #111;  
+}
+
+#game {
+	background: url(../img/board.png); 
+	position: relative;
+}
+
+#page {
+	width: 821px;
+	min-height: 800px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	text-shadow: 0 1px 5px rgba(60,60,60,.6);
+}
+
+header {
+	height: 88px;
+	padding-top: 45px;
+	margin-bottom: 50px;
+	font-family: "Rock Salt", Arial, sans-serif;
+	font-size: 14px;
+	text-shadow:0 3px 0 rgba(0,0,0,.5);
+	color: #fff; 
+}
+
+.nivel-progresso {
+	display: none;
+}
