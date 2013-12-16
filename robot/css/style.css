@@ -14,9 +14,6 @@
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-o-border-radius: 10px;
-}
-
-.container h1 {
 	text-align: center;
 }
 
@@ -24,10 +21,6 @@
 	display: block;
 	margin: 0 auto;
 	width: 260px;
-}
-
-.wrap p {
-	text-align: center;
 }
 
 button {
@@ -137,32 +130,30 @@ button:hover {
 	border-radius: 20px 20px 100px 100px;
 }
 
-.left {
+.arms {
 	font-family: 'Poller One', verdana, arial, sans-serif;
 	font-weight: bold;
 	font-size: 145px;
-	color: #666;
-	transform: rotate(200deg);
-	-webkit-transform: rotate(200deg);
-	-moz-transform: rotate(200deg);
 	position: relative;
-	top: -189px;
-	left: -155px;
+	color: #666;
 	z-index: -1;
 }
 
+.left {
+	transform: rotate(200deg);
+	-webkit-transform: rotate(200deg);
+	-moz-transform: rotate(200deg);	
+	top: -189px;
+	left: -155px;
+}
+
 .right {
-	font-family: 'Poller One', verdana, arial, sans-serif;
-	font-weight: bold;
-	font-size: 145px;
-	color: #666;
+	
 	transform: scaleY(-1) rotate(20deg);
 	-webkit-transform: scaleY(-1) rotate(20deg);
 	-moz-transform: scaleY(-1) rotate(20deg);
-	position: relative;
 	top: -361px;
 	left: 155px;
-	z-index: -1;
 }
 
 .foot {
