@@ -143,17 +143,16 @@ button:hover {
 	transform: rotate(200deg);
 	-webkit-transform: rotate(200deg);
 	-moz-transform: rotate(200deg);	
-	top: -189px;
-	left: -155px;
+	top: -180px;
+	left: -135px;
 }
 
 .right {
-	
 	transform: scaleY(-1) rotate(20deg);
 	-webkit-transform: scaleY(-1) rotate(20deg);
 	-moz-transform: scaleY(-1) rotate(20deg);
-	top: -361px;
-	left: 155px;
+	top: -352px;
+	left: 135px;
 }
 
 .foot {
