@@ -1,4 +1,5 @@
 /* GLOBAL */
+body {overflow-x:hidden}
 
 .container {
 	display: block;
