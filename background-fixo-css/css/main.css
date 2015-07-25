@@ -11,6 +11,7 @@ section {
     text-align: center; 
     flex-direction: column;
     padding: 2vw;
+    background-color: #000;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
