@@ -22,7 +22,6 @@ section:first-of-type {
 }
 section:nth-of-type(odd) { 
     color: #fff;
-    background: #000;
     text-shadow: 0 0 5px rgba(0,0,0,0.4); 
 }
 section:nth-child(1) { 
