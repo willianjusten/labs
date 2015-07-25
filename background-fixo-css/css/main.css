@@ -16,6 +16,10 @@ section {
     background-attachment: fixed;
     font-size: 4vw; 
 }
+section p {
+    margin: 0;
+    font-size:3vw;
+}
 section:first-of-type { 
     text-transform: uppercase;
     font-size: 7vw;
