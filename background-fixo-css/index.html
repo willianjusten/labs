@@ -7,6 +7,7 @@
     <title>Background fixo com CSS</title>
     <link rel="stylesheet" href="css/main.css">
     <link href='http://fonts.googleapis.com/css?family=Raleway:700,300' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/vunit.js"></script>
 
     <meta name="description" content="Como criar um efeito de reveal entre seções usando um Background fixo só com css.">
 
@@ -37,34 +38,47 @@
     <meta itemprop="name" content="Background fixo com CSS"/>
     <meta itemprop="description" content="Como criar um efeito de reveal entre seções usando um Background fixo só com css.">
     <meta itemprop="image" content="http://willianjusten.com.br/assets/img/reveal-bg/image.png"/>
+    <script>
+         new vUnit({
+            CSSMap: {
+                // The selector (VUnit will create rules ranging from .selector1 to .selector100)
+                '.vh': {
+                    // The CSS property (any CSS property that accepts px as units)
+                    property: 'height',
+                    // What to base the value on (vh, vw, vmin or vmax)
+                    reference: 'vh'
+                }
+            }
+        }).init();
+    </script>
 </head>
 <body>
-    <section>
+    <section class="vh100">
       <h1>Great Music Quotes</h1>
     </section>
 
-    <section>
+    <section class="vh100">
       <blockquote cite="Friedrich Nietzsche">
           <h3>"Without music, life would be a mistake."</h3>
           <p>Friedrich Nietzsche</p>
       </blockquote>
     </section>
 
-    <section>
+    <section class="vh100">
       <blockquote cite="John Green">
           <h1>"Some people have lives; some people have music."</h1>
           <p>John Green</p>
       </blockquote>
     </section>
 
-    <section>
+    <section class="vh100">
       <blockquote cite="Victor Hugo">
           <h4>"Music expresses that which cannot be said and on which it is impossible to be silent."</h4>
           <p>Victor Hugo</p>
       </blockquote>
     </section>
 
-    <section>
+    <section class="vh100">
       <h1>Where words leave off, music begins.</h1>
     </section>
 
