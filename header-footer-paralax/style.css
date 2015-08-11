@@ -34,7 +34,7 @@ header
   background: url(header-bg.jpg) no-repeat 50% 50%;
   background-size: cover;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   top: 0;
   position: fixed;
   z-index: -1;
