@@ -95,6 +95,7 @@ header h1 {
   font-size: 4em;
   text-transform: uppercase;
   text-align: center;
+  text-shadow: 0 0 5px rgba(0,0,0,0.4);
 }
 
 #about {
@@ -130,6 +131,7 @@ header h1 {
   text-align: center;
   line-height: 80vh;
   margin:0;
+  text-shadow: 0 0 5px rgba(0,0,0,0.4);
 }
 
 footer {
