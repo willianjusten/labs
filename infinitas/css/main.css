@@ -1,0 +1,486 @@
+/*  Syntax Quick Reference for Jeet
+    --------------------------
+    column(ratios = 1, offset = 0, cycle = 0, uncycle = 0, gutter = jeet.gutter)
+    span(ratio = 1, offset = 0)
+    shift(ratios = 0, col_or_span = column, gutter = jeet.gutter)
+    unshift()
+    edit()
+    center(max_width = 1410px, pad = 0)
+    stack(pad = 0, align = false)
+    unstack()
+    align(direction = both)
+    cf()
+
+    For more info see:
+        Kouto Swiss Doc: http://kouto-swiss.io/
+        Jeet Doc: http://jeet.gs
+
+    And of course, look in node_modules for axis-css and jeet
+*/
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+.banner,
+.roteiros,
+.footer-paralax {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container,
+.mosaic,
+.mosaic-gap {
+  *zoom: 1;
+  width: auto;
+  max-width: 78.75rem;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+.container:before,
+.mosaic:before,
+.mosaic-gap:before,
+.container:after,
+.mosaic:after,
+.mosaic-gap:after {
+  content: '';
+  display: table;
+}
+.container:after,
+.mosaic:after,
+.mosaic-gap:after {
+  clear: both;
+}
+.mosaic__link,
+.mosaic-gap--link {
+  border: 1px solid #bbb;
+  color: #fff;
+  display: table;
+  margin: auto;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0.625rem 1.563rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.mosaic__link:hover,
+.mosaic-gap--link:hover {
+  background: #fff;
+  color: #000;
+}
+body,
+html {
+  height: 100%;
+}
+.header--fixed {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  box-shadow: 0 -5px 20px #000;
+}
+.header--fixed nav {
+  float: right;
+}
+.header--fixed nav a {
+  color: #383336;
+  font-size: 1.375rem;
+  font-weight: 300;
+  padding: 0 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header--fixed nav a:hover {
+  color: #d6c99c;
+}
+.header--fixed li {
+  display: inline-block;
+}
+.bar {
+  background: #fff;
+  padding: 15px;
+}
+.bar__logos {
+  float: left;
+  margin-top: 8px;
+}
+.bar__logos img {
+  margin-right: 35px;
+}
+.presentation {
+  text-align: center;
+  *zoom: 1;
+  width: auto;
+  max-width: 815px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+.presentation:before,
+.presentation:after {
+  content: '';
+  display: table;
+}
+.presentation:after {
+  clear: both;
+}
+.presentation__title {
+  font-size: 2.25rem;
+  color: #383336;
+  text-transform: uppercase;
+}
+.presentation__title:after {
+  content: '';
+  color: #d6c99c;
+  display: block;
+  border: 2px solid;
+  width: 36px;
+  margin: 20px auto 40px;
+}
+.presentation__description {
+  font-size: 1.5rem;
+  color: #7b7b7b;
+}
+.btn-veja-mais {
+  color: #383336;
+  font-size: 1.688rem;
+  padding: 0 0 2.5rem;
+  float: right;
+  text-decoration: none;
+}
+.banner {
+  position: relative;
+  background-image: url("../img/header-mock.jpg");
+  height: 100%;
+}
+.roteiros {
+  margin-top: 6.25rem;
+  padding: 0.938rem 0;
+  background-image: url("../img/map.jpg");
+  background-attachment: fixed;
+}
+.footer-paralax {
+  background-image: url("../img/footer-paralax.jpg");
+  background-attachment: fixed;
+  height: 80%;
+}
+.parceiros {
+  background: #dadada;
+}
+.mosaic__title {
+  font-weight: 300;
+  margin-top: 4.688rem;
+}
+.mosaic__title--cultura {
+  color: #204675;
+}
+.mosaic__title--culinaria {
+  color: #207546;
+}
+.mosaic__image {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 33.33333333333333%;
+  margin-left: 0%;
+  margin-right: 0%;
+  position: relative;
+  max-height: 18.75rem;
+  margin: 0;
+}
+.mosaic__image:before,
+.mosaic__image:after {
+  content: '';
+  display: table;
+}
+.mosaic__image:after {
+  clear: both;
+}
+.mosaic__image:hover .mosaic__legend {
+  height: 18.75rem;
+}
+.mosaic__legend {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.4);
+  height: 70px;
+  overflow: hidden;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+.mosaic__link {
+  margin-top: 5rem;
+}
+.mosaic__text {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 400;
+  padding-left: 1.563rem;
+}
+.mosaic-gap--box {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 32.29133333333333%;
+  margin-left: 0%;
+  margin-right: 1.563%;
+}
+.mosaic-gap--box:before,
+.mosaic-gap--box:after {
+  content: '';
+  display: table;
+}
+.mosaic-gap--box:after {
+  clear: both;
+}
+.mosaic-gap--box:nth-child(3n) {
+  margin-right: 0%;
+  float: right;
+}
+.mosaic-gap--box:nth-child(3n+1) {
+  clear: both;
+}
+.mosaic-gap--image {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  height: 235px;
+  max-width: 400px;
+}
+.mosaic-gap--legend {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.mosaic-gap--legend:hover {
+  background: rgba(0,0,0,0.6);
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.mosaic-gap--link {
+  margin-top: 100px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.mosaic-gap--text {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0.625rem 0 1.875rem;
+}
+.icon {
+  width: 45px;
+  height: 45px;
+  vertical-align: bottom;
+  margin-right: 0.625rem;
+}
+.icon__cultura {
+  fill: #204675;
+}
+.icon__culinaria {
+  fill: #207546;
+}
+.icon-next {
+  width: 36px;
+  height: 36px;
+  vertical-align: top;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: #faf3f5;
+}
