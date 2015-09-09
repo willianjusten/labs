@@ -351,12 +351,7 @@ html {
 .mosaic__title {
   font-weight: 300;
   margin-top: 4.688rem;
-}
-.mosaic__title--cultura {
-  color: #204675;
-}
-.mosaic__title--culinaria {
-  color: #207546;
+  color: #383336;
 }
 .mosaic__image {
   *zoom: 1;
@@ -462,18 +457,6 @@ html {
   font-weight: 400;
   text-transform: uppercase;
   margin: 0.625rem 0 1.875rem;
-}
-.icon {
-  width: 45px;
-  height: 45px;
-  vertical-align: bottom;
-  margin-right: 0.625rem;
-}
-.icon__cultura {
-  fill: #204675;
-}
-.icon__culinaria {
-  fill: #207546;
 }
 .icon-next {
   width: 36px;
