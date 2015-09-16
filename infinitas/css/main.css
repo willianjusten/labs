@@ -251,6 +251,14 @@ body,
 html {
   height: 100%;
 }
+@media only screen and (max-width: 78.75rem) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+img {
+  max-width: 100%;
+}
 .header--fixed {
   width: 100%;
   position: fixed;
@@ -286,7 +294,6 @@ html {
   margin-right: 35px;
 }
 .presentation {
-  text-align: center;
   *zoom: 1;
   width: auto;
   max-width: 815px;
@@ -296,6 +303,7 @@ html {
   margin-left: auto;
   padding-left: 0;
   padding-right: 0;
+  text-align: center;
 }
 .presentation:before,
 .presentation:after {
@@ -304,6 +312,12 @@ html {
 }
 .presentation:after {
   clear: both;
+}
+.presentation--intro {
+  margin-top: 6.25rem;
+}
+.presentation--divisor {
+  margin: 5rem 0;
 }
 .presentation__title {
   font-size: 2.25rem;
@@ -315,12 +329,49 @@ html {
   color: #d6c99c;
   display: block;
   border: 2px solid;
-  width: 36px;
-  margin: 20px auto 40px;
+  width: 2.25rem;
+  margin: 1.25rem auto 2.5rem;
+}
+.presentation__title--lighter {
+  font-weight: 400;
+}
+.presentation__title--lighter:after {
+  margin: 0.625rem 0;
 }
 .presentation__description {
+  text-align: center;
   font-size: 1.5rem;
   color: #7b7b7b;
+}
+.categoria__ball {
+  width: 10px;
+  height: 10px;
+  background-color: #666;
+  display: block;
+  border-radius: 50%;
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+}
+@media only screen and (max-width: 767px) {
+  .categoria__ball {
+    margin: -3px auto;
+  }
+}
+.categoria__divisor {
+  display: block;
+  margin: auto;
+}
+.categoria__title {
+  color: #999;
+  font-size: 6.875rem;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .categoria__title {
+    font-size: 3.75rem;
+  }
 }
 .btn-veja-mais {
   color: #383336;
@@ -329,10 +380,41 @@ html {
   float: right;
   text-decoration: none;
 }
+.embed-container {
+  overflow: hidden;
+  max-width: 100%;
+  height: 31.25rem;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  width: 100%;
+  height: 100%;
+  max-height: 31.25rem;
+}
 .banner {
   position: relative;
-  background-image: url("../img/header-mock.jpg");
   height: 100%;
+}
+.banner__title {
+  padding-top: 40vh;
+  margin: 0;
+  text-align: center;
+  font-size: 6.875rem;
+  color: #fff;
+  text-shadow: 1px 1px 10px #333;
+}
+@media only screen and (max-width: 767px) {
+  .banner__title {
+    font-size: 3.75rem;
+  }
+}
+.banner--home {
+  background-image: url("../img/header-mock.jpg");
+}
+.banner--culinaria {
+  background-image: url("../img/culinaria-header.jpg");
+  background-attachment: fixed;
 }
 .roteiros {
   margin-top: 6.25rem;
@@ -373,6 +455,118 @@ html {
 .mosaic__image:after {
   clear: both;
 }
+@media only screen and (max-width: 47.938rem) {
+  .mosaic__image {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 50%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .mosaic__image:before,
+  .mosaic__image:after {
+    content: '';
+    display: table;
+  }
+  .mosaic__image:after {
+    clear: both;
+  }
+  .mosaic__image img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 30rem) {
+  .mosaic__image {
+    display: block;
+    clear: both;
+    float: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mosaic__image:first-child {
+    margin-left: auto;
+  }
+  .mosaic__image:last-child {
+    margin-right: auto;
+  }
+}
+.mosaic__image--brasil {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 24.53125%;
+  margin-left: 0%;
+  margin-right: 0.625%;
+  position: relative;
+}
+.mosaic__image--brasil:before,
+.mosaic__image--brasil:after {
+  content: '';
+  display: table;
+}
+.mosaic__image--brasil:after {
+  clear: both;
+}
+.mosaic__image--brasil:nth-child(4n) {
+  margin-right: 0%;
+  float: right;
+}
+.mosaic__image--brasil:nth-child(4n+1) {
+  clear: both;
+}
+.mosaic__image--brasil iframe {
+  height: 13.75rem;
+  width: 100%;
+}
+@media only screen and (max-width: 47.938rem) {
+  .mosaic__image--brasil {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 49.375%;
+    margin-left: 0%;
+    margin-right: 1.25%;
+  }
+  .mosaic__image--brasil:before,
+  .mosaic__image--brasil:after {
+    content: '';
+    display: table;
+  }
+  .mosaic__image--brasil:after {
+    clear: both;
+  }
+  .mosaic__image--brasil:nth-child(2n) {
+    margin-right: 0%;
+    float: right;
+  }
+  .mosaic__image--brasil:nth-child(2n+1) {
+    clear: both;
+  }
+  .mosaic__image--brasil img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 30rem) {
+  .mosaic__image--brasil {
+    display: block;
+    clear: both;
+    float: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mosaic__image--brasil:first-child {
+    margin-left: auto;
+  }
+  .mosaic__image--brasil:last-child {
+    margin-right: auto;
+  }
+}
 .mosaic__image:hover .mosaic__legend {
   height: 18.75rem;
 }
@@ -386,6 +580,9 @@ html {
   overflow: hidden;
   -webkit-transition: 0.7s;
   transition: 0.7s;
+}
+.mosaic__legend--single {
+  bottom: 3px;
 }
 .mosaic__link {
   margin-top: 5rem;
