@@ -33,10 +33,12 @@ p {
     width: 100%;
     height: 100%;
     position: relative;
-    /*transform: translateX(0);*/
-    transform: translate3d(0);
-    transition: .3s ease all;
-    backface-visibility: hidden;
+    -webkit-transform: translate3d(0);
+            transform: translate3d(0);
+    -webkit-transition: .3s ease all;
+            transition: .3s ease all;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
 }
 
 .conteudo {
@@ -46,8 +48,8 @@ p {
 .menu {
     height: 100%;
     position: absolute;
-    /*transform: translateX(-300px);*/
-    transform: translate3d(-300px,0,0);
+    -webkit-transform: translate3d(-300px,0,0);
+            transform: translate3d(-300px,0,0);
     width: 300px;
     background: #BF0000;
     padding: 5rem;
@@ -73,6 +75,6 @@ p {
 }
 
 .wrapper.show-menu .canvas {
-    /*transform: translateX(300px);*/
-    transform: translate3d(300px,0,0);
+    -webkit-transform: translate3d(300px,0,0);
+            transform: translate3d(300px,0,0);
 }
