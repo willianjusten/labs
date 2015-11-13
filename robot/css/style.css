@@ -1,0 +1,169 @@
+/* GLOBAL */
+body {overflow-x:hidden}
+
+.container {
+	display: block;
+	width: 800px;
+	height: 560px;
+	margin: auto;
+  	position: absolute;
+  	top: 0; left: 0; bottom: 0; right: 0;
+	padding: 20px;
+	box-shadow: 1px 1px 37px #000;
+	z-index: -2;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	text-align: center;
+}
+
+.wrap {
+	display: block;
+	margin: 0 auto;
+	width: 260px;
+}
+
+button {
+	background: #F00;
+	color: #fff;
+	font-size: 14px;
+	padding: 6px;
+	border: 0;
+	border-bottom: 5px solid #970000;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #970000;
+}
+
+
+/* ANIMATION ROBOT */
+
+@keyframes dance {
+	0% { left: 525px;}
+	50% { left: 50px;}
+	100% { left: 525px;}
+}
+
+@-webkit-keyframes dance {
+	0% { left: 525px;}
+	50% { left: 50px;}
+	100% { left: 525px;}
+
+}
+
+@-moz-keyframes dance {
+	0% { left: 525px;}
+	50% { left: 50px;}
+	100% { left: 525px;}
+
+}
+
+.robot {
+	animation: dance 5s infinite;
+	-webkit-animation: dance 5s infinite;
+	-moz-animation: dance 5s infinite;
+	position: relative;
+	left: 200px;
+}
+
+
+.beep {
+	width: 5px;
+	height: 0;
+	border: 5px solid transparent;
+	border-top: 10px solid #777;
+	border-bottom: 40px solid #888;
+	position: relative;
+	left: 103px;
+}
+
+/* LASER ANIMATION */
+
+@keyframes blink {
+	50% {
+		background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
+	}
+}
+@-webkit-keyframes blink {
+	50% {
+		background: -webkit-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+	}
+}
+@-moz-keyframes blink {
+	50% {
+		background: -moz-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+	}
+}
+
+.laser {
+	animation: blink .5s infinite;
+	-webkit-animation: blink .5s infinite;
+	-moz-animation: blink .5s infinite;
+}
+
+/* LASER ANIMATION */
+
+.brain {
+	background: radial-gradient(circle, white 15%, transparent 40%), #cc5;
+	background: -moz-radial-gradient(circle, white 15%, transparent 40%) #cc5;
+	background: -webkit-radial-gradient(circle, white 15%, transparent 40%) #cc5;
+	background-size: 50px 100px;
+	height: 90px;
+	width: 100px;
+	border-radius: 60px 60px 10px 10px;
+	border-bottom: 20px solid #666;
+	position: relative;
+	left: 60px;
+}
+
+
+/* ROBOT PARTS */
+
+.torso {
+	height: 0;
+	width: 100px;
+	border-top: 170px solid #bc6;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+	border-radius: 20px 20px 100px 100px;
+}
+
+.arms {
+	font-family: 'Poller One', verdana, arial, sans-serif;
+	font-weight: bold;
+	font-size: 145px;
+	position: relative;
+	color: #666;
+	z-index: -1;
+}
+
+.left {
+	transform: rotate(200deg);
+	-webkit-transform: rotate(200deg);
+	-moz-transform: rotate(200deg);	
+	top: -180px;
+	left: -135px;
+}
+
+.right {
+	transform: scaleY(-1) rotate(20deg);
+	-webkit-transform: scaleY(-1) rotate(20deg);
+	-moz-transform: scaleY(-1) rotate(20deg);
+	top: -352px;
+	left: 135px;
+}
+
+.foot {
+	height: 30px;
+	width: 30px;
+	background: #ccc;
+	border-radius: 40px;
+	border: 10px solid #777;
+	position: relative;
+	left: 90px;
+	top: -10px;
+	z-index: -1;
+}

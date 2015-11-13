@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Jogo da Memória</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>
+		<h1>CSS3 Transitions</h1>
+	</header>
+
+	<section id="game">
+		<div id="cards">
+			<div class="card">
+				<div class="face front"></div>
+				<div class="face back"></div>
+			</div>
+		</div>
+
+		<div id="win">
+			<h2>Parabéns! Você venceu!</h2>
+			<a href="">Jogar novamente!</a>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="bloco">
+				<p class="acertos">Acertos: <span id="acertos">0</span></p>
+			</div>
+
+			<div class="bloco">
+				<p id="tempo"></p>
+			</div>
+			<div class="bloco">
+				<p class="erros">Erros: <span id="erros">0</span></p>
+			</div>
+		</div>		
+	</footer>
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/card-flip.js"></script>
+</body>
+</html>
+	
