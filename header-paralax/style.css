@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+.header-paralax {
+    background-image: url('img/header.jpg');
+    background-size: cover;
+    width: 100%;
+    position: fixed;
+    height: 600px;
+}
+
+.header-paralax h1 {
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 3px 1px #000;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    letter-spacing: 20px;
+    font-size: 50px;
+    padding: 210px 0;
+}
+
+main {
+    background: #E7E3DA;
+    position: relative;
+    top: 600px;
+    font-family: 'Raleway', sans-serif;
+}
+
+main .content {
+    max-width: 850px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+main h1 {
+    font-size: 40px;
+    padding: 50px 0;
+}
+
+main p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 20px 0;
+}
