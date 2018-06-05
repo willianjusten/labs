@@ -15,21 +15,31 @@
         justify-content: center;
         height: 100vh;
     }
-    @keyframes donut-spin {
+    @keyframes spin {
         to { transform: rotate(360deg);}
     }
-    .donut {
+    .spinner {
         border: 8px solid rgba(0, 0, 0, 0.1);
         border-left-color: #22a6b3;
         border-radius: 50%;
         width: 50px;
         height: 50px;
-        animation: donut-spin 1.2s linear infinite;
+        animation: spin 1.2s linear infinite;
     }
 </style>
 <body>
 
-<div class="donut"></div>
+<div class="spinner"></div>
 
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58087941-1', 'auto');
+    ga('send', 'pageview');
+    ga('send', 'event', 'labs', 'spinner-loader');
+</script>
 </body>
 </html>
