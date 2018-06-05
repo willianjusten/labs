@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spinner Loader CSS puro</title>
+</head>
+
+<style>
+    body {
+        background-color: #dff9fb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    @keyframes donut-spin {
+        to { transform: rotate(360deg);}
+    }
+    .donut {
+        border: 8px solid rgba(0, 0, 0, 0.1);
+        border-left-color: #22a6b3;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: donut-spin 1.2s linear infinite;
+    }
+</style>
+<body>
+
+<div class="donut"></div>
+
+</body>
+</html>
