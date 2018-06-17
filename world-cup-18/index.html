@@ -22,6 +22,11 @@
     height: 80%;
   }
 
+  svg,
+  a {
+    opacity: 0;
+  }
+
   a {
     font-family: sans-serif;
     margin-top: 30px;
@@ -1098,6 +1103,7 @@
   const background = document.getElementById('background');
 
   // main items
+  const svg = document.querySelector('svg');
   const trophy = document.getElementById('trophy');
   const rightFlag = document.getElementById('right-flag');
   const leftFlag = document.getElementById('left-flag');
@@ -1107,15 +1113,18 @@
 
   const tl = new TimelineMax();
 
+  // make the elements appear after loading the script
+  TweenMax.set([svg, restartButton], { opacity: 1 });
+
   tl.staggerFrom(title, 1.5, { opacity: 0, y: 50, ease: Power4.easeInOut }, -0.05)
-  .from(trophy, 2, { scale: 0, opacity: 0, transformOrigin: '50% 50%', ease: Power4.easeInOut }, '-= 1')
-  .from(rightVuvuzela, 1, { scale: 0, opacity: 0, transformOrigin: 'left bottom',  ease: Cubic.easeIn}, '-= 1.5')
-  .from(leftVuvuzela, 1, { scale: 0, opacity: 0, transformOrigin: 'right bottom',  ease: Cubic.easeIn}, '-= 1.5')
-  .from(rightFlag, 1, { scale: 0, opacity: 0, rotation: '-90deg', transformOrigin: 'left bottom', ease: Power4.easeInOut }, '-= 1')
-  .from(leftFlag, 1, { scale: 0, opacity: 0, rotation: '90deg', transformOrigin: 'right bottom', ease: Power4.easeInOut }, '-= 1')
-  .from(background, .5, { opacity: 0, scale: 0, transformOrigin: '50% bottom'}, '-= 1')
-  .to(background, 1, {opacity: .4, scale: .95, transformOrigin: '50% bottom', repeat: -1, yoyo: true})
-  .from(restartButton, .3, { opacity: 0 });
+    .from(trophy, 2, { scale: 0, opacity: 0, transformOrigin: '50% 50%', ease: Power4.easeInOut }, '-= 1')
+    .from(rightVuvuzela, 1, { scale: 0, opacity: 0, transformOrigin: 'left bottom',  ease: Cubic.easeIn}, '-= 1.5')
+    .from(leftVuvuzela, 1, { scale: 0, opacity: 0, transformOrigin: 'right bottom',  ease: Cubic.easeIn}, '-= 1.5')
+    .from(rightFlag, 1, { scale: 0, opacity: 0, rotation: '-90deg', transformOrigin: 'left bottom', ease: Power4.easeInOut }, '-= 1')
+    .from(leftFlag, 1, { scale: 0, opacity: 0, rotation: '90deg', transformOrigin: 'right bottom', ease: Power4.easeInOut }, '-= 1')
+    .from(background, .5, { opacity: 0, scale: 0, transformOrigin: '50% bottom'}, '-= 1')
+    .from(restartButton, .3, { opacity: 0 })
+    .to(background, 1, {opacity: .4, scale: .95, transformOrigin: '50% bottom', repeat: -1, yoyo: true})
 
   restartButton.addEventListener('click', function() {
     tl.restart();
