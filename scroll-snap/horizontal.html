@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Dica de CSS: Scroll Snap</title>
+  <title>Dica de CSS: Scroll Snap - Horizontal</title>
 </head>
-
-<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,9 +16,6 @@
 }
 
 .container {
-	font-family: sans-serif;
-	scroll-snap-type: mandatory;
-	scroll-snap-points-y: repeat(100vw);
 	scroll-snap-type: x mandatory;
 	display: flex;
 	overflow-x: scroll;
@@ -35,16 +30,6 @@ section {
   position: relative;
 }
 
-.title {
-  color: white;
-  font-family: 'Indie Flower', cursive;
-  font-size: 4rem;
-  padding: 2rem;
-  position: fixed;
-  text-shadow: 0px 0px 6px #0c2183;
-  z-index: 2;
-}
-
 .description {
   background: rgba(0, 0, 0, .3);
   max-width: 250px;
@@ -56,6 +41,7 @@ section {
 }
 
 .description p {
+  font-family: sans-serif;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -69,7 +55,6 @@ section {
 </style>
 <body>
   <main class="container">
-    <h1 class="title">My trip to Austria</h1>
     <section class="one">
       <div class="description">
         <p>Um caminho qualquer em Bad Ausee, uma cidade na região da Estíria que tem pouco mais de 5 mil habitantes.</p>
