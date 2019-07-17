@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dica de CSS: Scroll Snap - Horizontal</title>
+</head>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+	scroll-snap-type: x proximity;
+	display: flex;
+	overflow-x: scroll;
+}
+
+section {
+  background-size: cover;
+  background-position: center center;
+	min-width: 100vw;
+	height: 100vh;
+	scroll-snap-align: start;
+  position: relative;
+}
+
+.description {
+  background: rgba(0, 0, 0, .3);
+  max-width: 250px;
+  color: white;
+  padding: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.description p {
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.one { background-image: url('./img/one.jpg') }
+.two { background-image: url('./img/two.jpg') }
+.three { background-image: url('./img/three.jpg') }
+.four { background-image: url('./img/four.jpg') }
+.five { background-image: url('./img/five.jpg') }
+
+</style>
+<body>
+  <main class="container">
+    <section class="one">
+      <div class="description">
+        <p>Um caminho qualquer em Bad Ausee, uma cidade na região da Estíria que tem pouco mais de 5 mil habitantes.</p>
+      </div>
+    </section>
+    <section class="two">
+      <div class="description">
+        <p>A caminho da cidade de Hallstatt, conhecida como uma das mais bonitas do mundo. Para chegar lá, somente de barco ou dando uma grande volta pelo lago de mesmo nome.</p>
+      </div>
+    </section>
+    <section class="three">
+      <div class="description">
+        <p>As margens do lago Autaussee. Esse dia fazia apenas 10 graus negativos, mas eu queria muito passear e explorar todos os lugares.</p>
+      </div>
+    </section>
+    <section class="four">
+      <div class="description">
+        <p>Mais uma foto do mesmo barco que leva a Hallstatt, mas dessa vez do meu drone, amo como a reflexão ficou tão azul em contraste com as montanhas.</p>
+      </div>
+    </section>
+    <section class="five">
+      <div class="description">
+        <p>Momentos antes do pôr-do-sol visto de Hallstatt. Essa cadeia de montanhas é realmente maravilhosa!</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
