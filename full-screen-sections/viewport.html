@@ -1,91 +1,95 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Seções Full Screen com CSS - Viewport</title>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:800,300' rel='stylesheet' type='text/css'>
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:800,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
 
-<style type="text/css">
+  <style type="text/css">
     * {
-        margin: 0;
-        padding: 0;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-        font-size: 16px;
-        font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-family: "Raleway", sans-serif;
     }
 
     h1 {
-        font-size: 4rem;
+      font-size: 4rem;
     }
 
     p {
-        font-size: 2.5rem;
-        font-weight: 300;
+      font-size: 2.5rem;
+      font-weight: 300;
     }
 
     section {
-        display: table;
-        width: 100%;
+      display: table;
+      width: 100%;
     }
 
     .height-80 {
-        background: #8E44AD;
-        height: 80vh;
+      background: #8e44ad;
+      height: 80vh;
     }
 
     .height-50 {
-        background: #34495e;
-        height: 50vh;
+      background: #34495e;
+      height: 50vh;
     }
 
     .height-100 {
-        background: #e74c3c;
-        height: 100vh;
+      background: #e74c3c;
+      height: 100vh;
     }
 
     .content {
-        color: #FFFFFF;
-        display: table-cell;
-        vertical-align: middle;
-        padding: 7%;
+      color: #ffffff;
+      display: table-cell;
+      vertical-align: middle;
+      padding: 7%;
     }
 
     @media (max-width: 767px) {
-        h1 {
-            font-size: 2rem;
-        }
+      h1 {
+        font-size: 2rem;
+      }
 
-        p {
-            font-size: 1rem;
-            font-weight: 300;
-        }
+      p {
+        font-size: 1rem;
+        font-weight: 300;
+      }
     }
-</style>
-<body>
+  </style>
+  <body>
     <section class="height-80">
-        <div class="content">
-            <h1>Viewport Units são demais!</h1>
-            <p>Essa div foi setada para ter 80vh, ocupando 80% da tela =)</p>
-        </div>
+      <div class="content">
+        <h1>Viewport Units são demais!</h1>
+        <p>Essa div foi setada para ter 80vh, ocupando 80% da tela =)</p>
+      </div>
     </section>
 
     <section class="height-50">
-        <div class="content">
-            <h1>É tão simples de brincar!</h1>
-            <p>Essa div foi setada para ter 50vh, ocupando 50% da tela =)</p>
-        </div>
+      <div class="content">
+        <h1>É tão simples de brincar!</h1>
+        <p>Essa div foi setada para ter 50vh, ocupando 50% da tela =)</p>
+      </div>
     </section>
 
     <section class="height-100">
-        <div class="content">
-            <h1>Libere sua criatividade!</h1>
-            <p>Essa div foi setada para ter 100vh, ocupando 100% da tela =)</p>
-        </div>
+      <div class="content">
+        <h1>Libere sua criatividade!</h1>
+        <p>Essa div foi setada para ter 100vh, ocupando 100% da tela =)</p>
+      </div>
     </section>
-</body>
+  </body>
 </html>
