@@ -14,6 +14,7 @@
       * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
 
       body {
@@ -21,35 +22,35 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
-        background-color: rgb(25, 25, 25);
+        background: rgba(25, 25, 25);
       }
 
       .line {
-        color: rgba(255, 255, 255, 0.75);
-        font-family: "Special Elite", cursive;
-        font-size: 3em;
-        margin: 0 auto;
         border-right: 2px solid rgba(255, 255, 255, 0.75);
+        color: rgba(255, 255, 255, 0.75);
+        font-family: "Special Elite", monospace;
+        font-size: 3em;
         text-align: center;
+        margin: 0 auto;
         white-space: nowrap;
-        overflow-x: hidden;
+        overflow: hidden;
       }
 
-      .anim-typewriter {
-        animation: typewriter 4s steps(40) 1s 1 normal both,
-          blinkTextCursor 500ms steps(40) infinite normal;
+      .typing-animation {
+        animation: blinkCursor 500ms steps(40) infinite normal,
+          typing 4s steps(40) 1s normal both;
       }
 
-      @keyframes typewriter {
+      @keyframes typing {
         from {
           width: 0;
         }
         to {
-          width: 18em;
+          width: 16em;
         }
       }
 
-      @keyframes blinkTextCursor {
+      @keyframes blinkCursor {
         from {
           border-right-color: rgba(255, 255, 255, 0.75);
         }
@@ -59,6 +60,6 @@
       }
     </style>
 
-    <p class="line anim-typewriter">Olá, meu nome é Willian Justen! =)</p>
+    <p class="line typing-animation">Olá, eu sou Willian Justen! =)</p>
   </body>
 </html>
