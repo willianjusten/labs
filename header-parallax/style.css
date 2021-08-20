@@ -8,7 +8,7 @@
 }
 
 .header-paralax {
-    background-image: url('img/header.jpg');
+    background-image: url('./img/header.jpg');
     background-size: cover;
     width: 100%;
     position: fixed;
