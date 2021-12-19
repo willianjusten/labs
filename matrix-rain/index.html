@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrix Rain</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+    }
+
+    canvas {
+      display: block;
+    }
+  </style>
+
+  <body>
+    <canvas id="matrix"></canvas>
+  </body>
+
+  <script>
+    // getting the canvas element
+    const c = document.getElementById("matrix");
+
+    // defining the canvas context
+    const ctx = c.getContext("2d");
+
+    // making the canvas full screen
+    c.height = window.innerHeight;
+    c.width = window.innerWidth;
+
+    // letters used on Matrix rain
+    // more on: https://bit.ly/3yFJoU3
+    const letters = [
+      "日",
+      "ﾊ",
+      "ﾐ",
+      "ﾋ",
+      "ｰ",
+      "ｳ",
+      "ｼ",
+      "ﾅ",
+      "ﾓ",
+      "ﾆ",
+      "ｻ",
+      "ﾜ",
+      "ﾂ",
+      "ｵ",
+      "ﾘ",
+      "ｱ",
+      "ﾎ",
+      "ﾃ",
+      "ﾏ",
+      "ｹ",
+      "ﾒ",
+      "ｴ",
+      "ｶ",
+      "ｷ",
+      "ﾑ",
+      "ﾕ",
+      "ﾗ",
+      "ｾ",
+      "ﾈ",
+      "ｽ",
+      "ﾀ",
+      "ﾇ",
+      "ﾍ",
+      ":",
+      "・",
+      ".",
+      "=",
+      "*",
+      "+",
+      "-",
+      "<",
+      ">",
+      "¦",
+      "｜",
+      "ﾘ",
+    ];
+
+    const fontSize = 18;
+
+    // defining how many columns to print based on canvas width and font size
+    const columns = c.width / fontSize;
+
+    // creating an array of drops to each column
+    let drops = [];
+
+    // starting every drop at a y=1 position
+    for (var x = 0; x < columns; x++) drops[x] = 1;
+
+    //drawing the characters
+    function draw() {
+      // painting the background
+      // the trick here is to use opacity
+      // so it will fade out with time
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, c.width, c.height);
+
+      // defining font styles (color and font family/size)
+      ctx.fillStyle = "#0F0";
+      ctx.font = fontSize + "px arial";
+
+      // drawing the characters
+      for (var i = 0; i < drops.length; i++) {
+        // get a random letter from the array
+        var text = letters[Math.floor(Math.random() * letters.length)];
+
+        // drawing the character
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        // moving the drop to the beginning of the canvas when it reaches the bottom
+        if (drops[i] * fontSize > c.height && Math.random() > 0.975)
+          drops[i] = 0;
+
+        // moving the drop in the Y coordinate
+        drops[i]++;
+      }
+    }
+
+    // loop to redraw the characters
+    setInterval(draw, 30);
+  </script>
+</html>
