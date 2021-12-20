@@ -141,9 +141,9 @@
       ctx.font = fontSize + "px arial";
 
       // drawing the characters
-      for (var i = 0; i < drops.length; i++) {
+      for (let i = 0; i < drops.length; i++) {
         // get a random letter from the array
-        var text = letters[Math.floor(Math.random() * letters.length)];
+        const text = letters[Math.floor(Math.random() * letters.length)];
 
         // drawing the character
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
