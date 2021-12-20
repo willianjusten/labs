@@ -126,7 +126,7 @@
     let drops = [];
 
     // starting every drop at a y=1 position
-    for (var x = 0; x < columns; x++) drops[x] = 1;
+    for (let x = 0; x < columns; x++) drops[x] = 1;
 
     //drawing the characters
     function draw() {
@@ -138,7 +138,7 @@
 
       // defining font styles (color and font family/size)
       ctx.fillStyle = "#0F0";
-      ctx.font = fontSize + "px arial";
+      ctx.font = `${fontSize}px arial`;
 
       // drawing the characters
       for (let i = 0; i < drops.length; i++) {
@@ -149,16 +149,19 @@
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
         // moving the drop to the beginning of the canvas when it reaches the bottom
+        // or when the random expression is true in order to make the rain randomly
         if (drops[i] * fontSize > c.height && Math.random() > 0.975)
           drops[i] = 0;
 
         // moving the drop in the Y coordinate
         drops[i]++;
       }
+
+      // recursive call to draw frame by frame
+      window.requestAnimationFrame(draw);
     }
 
-    // loop to redraw the characters
-    setInterval(draw, 30);
+    draw()
   </script>
 
   <script>
